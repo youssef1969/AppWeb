@@ -1,0 +1,67 @@
+/* Reset des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Barre de navigation */
+.navbar {
+    background-color: #007bff;
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo img {
+    width: 200px; /* Ajustez la taille du logo selon vos besoins */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #28a745; /* Couleur verte pour le bouton */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #218838; /* Couleur verte légèrement plus foncée au survol */
+}
+
+/* centrer la div wallpaper qui contient une imgae */
+.wallpaper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.wallpaper img {
+    width: 40%;
+    height: auto;
+}
+.main-title {
+    font-size: 3rem;
+    color: #007bff; /* Couleur bleue pour le titre principal */
+    margin-top: 50px;
+    text-align: center;
+}

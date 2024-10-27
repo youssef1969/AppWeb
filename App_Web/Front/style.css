@@ -1,0 +1,305 @@
+:root {
+    --num_hours: 13;
+    --num_days: 5;
+    --num_possibles:52; /* 8h, 8h15, 8h30, 8h45 */
+    --hourHeight: 100px
+}
+
+* {
+    font: 1em "Fira Sans", sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #2b73b6;
+    padding:10px 0;
+}
+
+.logo {
+    background-color: #2b73b6;
+    padding: 0.2rem;
+}
+
+.Profil {
+    display: flex;
+    align-items: center;
+}
+
+.profilName {
+    margin: 0 1rem;
+}
+
+#decoBtn {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    border-style: none;
+    height: 50px;
+    background-color: #d7d7d7;
+    transition: background-color 150ms ease-out;
+    cursor: pointer;
+}
+
+#decoBtn:hover {
+    background-color: #b7b7b7;
+}
+
+#decoBtn:active {
+    background-color: #979797;
+    transition: all 0s linear;
+}
+
+.iconOut {
+    padding: 0 0.2rem 
+}
+
+nav {
+    border-bottom: solid rgb(163, 163, 163) 1px;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.ajouterBtn {
+    margin:0 1rem;
+    color: white;
+    background-color: #2b73b6;
+    display: flex;
+    align-items: center;
+    border-style: none;
+    border-radius: 4px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 100ms ease-in;
+}
+
+.ajouterBtn:hover {
+    background-color: #1f5282;
+}
+
+.ajouterBtn:active {
+    background-color: #102940;
+    transition: all 0s linear;
+}
+
+.ajouterBtn > p {
+    padding-right: 0.3rem;
+}
+
+.iconAdd {
+    font-size: 1.5rem;
+    padding: 0 0.3rem;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.returnTodayBtn {
+    border-style: solid;
+    border-color : #bebebe;
+    border-width: 1px;
+    border-radius: 4px;
+    height: 40px;
+    padding : 0 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: white;
+    transition: all 100ms ease-in;
+}
+
+.returnTodayBtn:hover {
+    background-color: #d7d7d7;
+}
+
+.returnTodayBtn:active {
+    background-color: #b9b9b9;
+    transition: all 0s ease-in;
+}
+
+.mvBtn {
+    border-style: none;
+    border-radius: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: white;
+    transition: all 100ms ease-in;
+}
+
+.mvBtn:hover {
+    background-color: #d7d7d7;
+}
+
+.mvBtn:active {
+    background-color: #b9b9b9;
+    transition: all 0s ease-in;
+}
+
+#date {
+    display: inline;
+    cursor: default;
+}
+
+.Calendar {
+    display: grid;
+    grid-template-columns: 5% 95%;
+}
+
+* {
+box-sizing: border-box;
+}
+
+.Blank {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.Hours {
+     grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: repeat(var(--num_hours),var(--hourHeight));
+
+}
+
+.hour {
+    text-align: end;
+    margin: 0.2rem 0 1.8rem 0;
+    padding-right: 0.5rem;
+}
+
+.hourValue {
+    display: inline;
+}
+.hourValue::after {
+    display: inline;
+    content: "";
+    position: absolute;
+    border-bottom: rgb(220, 220, 220) solid 1px;
+    width:100%;
+    margin-top: calc(var(--hourHeight)/2);
+    margin-left: 10px;
+    z-index: auto;
+}
+
+.hour::after {
+    content: "";
+    position: absolute;
+    border-bottom: rgb(163, 163, 163) solid 1px;
+    width:100%;
+    margin-top: -4px;
+    z-index: auto;
+}
+
+.Days {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(var(--num_days), minmax(150px,1fr));
+}
+
+.Day {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.Day::after {
+    content: "";
+    position: absolute;
+    border-left: rgb(163, 163, 163) solid 1px;
+    height: calc( calc(var(--hourHeight)*var(--num_hours)) + 20px);
+    margin-top: 50px;
+    margin-left: -9px;
+    z-index: auto;
+}
+
+.Day > p {
+    display: inline;
+    margin: 0 0 0 0;
+}
+
+.dname {
+    font-size: 1rem;
+}
+
+.num {
+    font-size : 2rem;
+}
+
+.selected {
+    color : blue;
+}
+
+.grid {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(var(--num_days), minmax(150px,1fr));
+
+}
+
+.Day-grid {
+    display: grid;
+    grid-template-rows: repeat(var(--num_possibles),calc(var(--hourHeight)/4));
+}
+
+
+.start-8 {
+    grid-row-start: 1;
+}
+
+.end-9-45 {
+    grid-row-end: 8;
+}
+
+.start-10-15 {
+    grid-row-start: 10;
+}
+
+.end-12 {
+    grid-row-end: 17;
+}
+
+.event {
+    margin: 0 0.2rem;
+    background-color: #75b6ff;
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.Title {
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.infos {
+    margin: 0.1rem;
+}
+
+.GroupList {
+    list-style: none;
+    padding: 0;
+}
+
+.Profs {
+    margin: 0;
+}
+

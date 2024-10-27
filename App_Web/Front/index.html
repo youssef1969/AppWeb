@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cacalendrier</title>
+        <link href="style.css" rel="stylesheet">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="logo-enseeiht.png" alt="Logo N7" class="logo">
+            <div class="Profil">
+                <p class="profilName">Romeo Roques</p>
+                <button id="decoBtn">Deconnexion<ion-icon class="iconOut" name="log-out-outline"></ion-icon></button>
+            </div>
+        </header>
+        <nav>
+            <button class="ajouterBtn" type="hidden">
+                <ion-icon class="iconAdd" name="add-outline"></ion-icon>
+                <p>Ajouter cours</p>
+            </button>
+            <div class="navigation">
+                <button onclick="returnTodayBtnAction()" class="returnTodayBtn">Aujourd'hui</button>
+                <button onclick="mvBtnAction('b')" class="mvBtn" id="backward"><ion-icon name="chevron-back-outline"></ion-icon></button>
+                <button onclick="mvBtnAction('f')" class="mvBtn" id="forward"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+                <p id="dateMonth"></p>    
+            </div>
+        </nav>
+        <main class="Calendar">
+            <div class="Blank"></div>
+            <div class="Hours">
+                <div class="hour">
+                    <p class="hourValue">8</p>
+                </div>
+                <div class="hour">
+                    <p class="hourValue">9</p>
+                </div><div class="hour">
+                    <p class="hourValue">10</p>
+                </div><div class="hour">
+                    <p class="hourValue">11</p>
+                </div><div class="hour">
+                    <p class="hourValue">12</p>
+                </div><div class="hour">
+                    <p class="hourValue">13</p>
+                </div><div class="hour">
+                    <p class="hourValue">14</p>
+                </div><div class="hour">
+                    <p class="hourValue">15</p>
+                </div><div class="hour">
+                    <p class="hourValue">16</p>
+                </div>
+                <div class="hour">
+                    <p class="hourValue">17</p>
+                </div>
+                <div class="hour">
+                    <p class="hourValue">18</p>
+                </div>
+                <div class="hour">
+                    <p class="hourValue">19</p>
+                </div>
+                <div class="hour">
+                    <p class="hourValue">20</p>
+                </div>
+            </div>
+            <div class="Days">
+                <div class="Day" id="lun"><p class="num" id="lunJ"></p> <p class="dname">Lundi</p></div>
+                <div class="Day" id="mar"><p class="num" id="marJ"></p> <p class="dname">Mardi</p></div>
+                <div class="Day" id="mer"><p class="num" id="merJ"></p> <p class="dname">Mercredi</p></div>
+                <div class="Day" id="jeu"><p class="num" id="jeuJ"></p> <p class="dname">Jeudi</p></div>
+                <div class="Day" id="ven"><p class="num" id="venJ"></p> <p class="dname">Vendredi</p></div>
+            </div>
+            <div class="grid">
+                <div class="Day-grid" id="lunGrid">
+                </div>
+                <div class="Day-grid" id="marGrid">
+                    <div class="event start-10-15 end-12">
+                        <h1 class="Title"> Cours 1</h1>
+                        <p class="infos courseTime">10h15 - 12h</p>
+                        <p class="infos Profs">Jean Paul Martin</p>
+                        <p class="infos Salle">A202</p>
+                        <ul class="infos GroupList">
+                            <li class="Group">TEAM A</li>
+                            <li class="Group">TEAM B</li>
+                            <li class="Group">TEAM C</li>
+                            <li class="Group">TEAM D</li>
+                        </ul>
+                    </div>
+                    <div class="event start-8 end-12"><p>test1</p></div>
+                    <div class="event start-8 end-9-45"><p>test2</p></div>
+
+                </div>
+                <div class="Day-grid" id="merGrid"></div>
+                <div class="Day-grid" id="jeuGrid"></div>
+                <div class="Day-grid" id="venGrid"></div>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

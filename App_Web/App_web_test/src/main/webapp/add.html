@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cacalendrier Ajout</title>
+    </head>
+    <body>
+        <main class="addCourse">
+            <form id="formAdd"><br>
+                <label>Titre</label><input type="text" name="titre"><br>
+                <label>Etudiants</label><input type="text" name="etudiants"><br>
+                <label>Profs</label><input type="text" name="profs"><br>
+                <label>Date</label><input type="date" name="jour">
+                <label>Heure debut</label><input type="time" name="debut">
+                <label>Heure fin</label><input type="time" name="fin"><br>
+                <label>Lieu</label><input type="text" name="lieu">
+                <button type="button" onclick="formToJSON()">Ajouter</button>
+            </form>
+        </main>
+        
+        <script src="jsForm.js"></script>
+    </body>
+</html>

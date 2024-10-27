@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/connexion.css" />
+
+    <title>Connexion - Plateforme de Gestion EDT</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container_nav">
+            <!-- Logo de l'ENSEEIHT à gauche -->
+            <a href="#" class="navbar-logo">
+                <img src="img/logo-enseeiht.png" alt="Logo ENSEEIHT">
+            </a>
+        </div>
+    </nav>
+<div class="d-lg-flex half">
+    <div class="contents order-2 order-md-1">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-7">
+                    <h3>Connexion</h3>
+                    <p class="mb-4">
+                        Bienvenue dans votre gestionnaire d'emploi du temps scolaire.
+                    </p>
+                    <form action="#" method="post">
+                        <div class="form-group first">
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Nom d'utilisateur"
+                                    id="username"
+                            />
+                        </div>
+                        <div class="form-group last mb-3">
+                            <input
+                                    type="password"
+                                    class="form-control"
+                                    placeholder="Mot de passe"
+                                    id="password"
+                            />
+                            <br>
+                            <br>
+                            <button type="button" id="showPassword">Afficher le mot de passe</button>
+                        </div>
+
+                        <div class="d-flex mb-5 align-items-center">
+                  <span class="ml-auto"
+                  ><a href="#" class="forgot-pass">Mot de passe perdu ?</a></span
+                  >
+                        </div>
+                        <br>
+
+                        <input
+                                type="submit"
+                                value="Se Connecter"
+                                class="btn btn-block btn-primary"
+                        />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const showPasswordButton = document.getElementById('showPassword');
+    const passwordInput = document.getElementById('password');
+
+    showPasswordButton.addEventListener('click', () => {
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            showPasswordButton.textContent = 'Cacher le mot de passe';
+        } else {
+            passwordInput.type = 'password';
+            showPasswordButton.textContent = 'Afficher le mot de passe';
+        }
+    });
+</script>
+</body>
+</html>

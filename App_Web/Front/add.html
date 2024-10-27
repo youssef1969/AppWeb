@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cacalendrier Ajout</title>
+        <link href="styleAjout.css" rel="stylesheet">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="logo-enseeiht.png" alt="Logo N7" class="logo">
+            <div class="Profil">
+                <p class="profilName">Romeo Roques</p>
+                <button id="decoBtn">Deconnexion<ion-icon class="iconOut" name="log-out-outline"></ion-icon></button>
+            </div>
+        </header>
+        <main class="addCourse">
+            <form id="formAdd" autocomplete="off">
+                <div class="inputField">
+                    <label for="titre">Titre</label><input type="text" name="titre" id="titre">
+                </div>
+                <div class="inputField">
+                    <label for="typeCours">Type</label>
+                    <select name="typeCours" id="typeCours">
+                        <option value="Cours">Cours</option>
+                        <option value="TD">TD</option>
+                        <option value="TP">TP</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+                <div class="inputField">
+                    <label for="listGroupEtu">Groupes Etudiants</label>
+                    <div class="inputZoneFlex">
+                        <input type="text" class="inputReel" id="listGroupEtu" name="listGroupEtu">
+                        <div class="inputZoneFlowRoot"></div>
+                    </div>
+                </div>
+                <div class="inputField">
+                    <label for="listProf">Professeurs</label>
+                    <div class="inputZoneFlex">
+                        <input type="text" class="inputReel" id="listProf" name="listProf">
+                        <div class="inputZoneFlowRoot"></div>
+                    </div>
+                </div>
+                <div class="inputField">
+                    <label for="jour">Date</label><input type="date" name="jour" id="jour">
+                </div>
+                <div class="inputField">
+                    <label for="debut">Heure debut</label><input type="time" name="debut" id="debut">
+                </div>
+                <div class="inputField">
+                    <label for="fin">Heure fin</label><input type="time" name="fin" id="fin">
+                </div>
+                <div class="inputField">
+                    <label for="lieu">Lieu</label><input type="text" name="lieu" id="lieu">
+                </div>
+                <div class="btnField">
+                    <button class="ajouterBtn" type="button" onclick="sendForm()">
+                        <ion-icon class="iconAdd" name="add-outline"></ion-icon>
+                        <p>Ajouter cours</p>
+                    </button>
+                </div>
+            </form>
+        </main>
+        
+        <script src="jsForm.js"></script>
+    </body>
+</html>
